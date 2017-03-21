@@ -2,7 +2,9 @@ angular.module('starter.services', [])
 
 /*注入自定义常量和 $http */
 .factory('HiSlider',function( SLIDER_API_URL, $http ){
-
+  /*
+  [{"id":"1","order":"0","image":"1.jpg","product":"433"},{"id":"2","order":"1","image":"2.jpg","product":"1104"},{"id":"3","order":"2","image":"3.jpg","product":"1263"},{"id":"4","order":"3","image":"4.jpg","product":"1611"}]
+   */
   return {
       getHomeSlider: function(callback) {
           return $http.get( SLIDER_API_URL, {}, {
